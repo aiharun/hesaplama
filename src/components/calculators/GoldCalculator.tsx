@@ -84,18 +84,32 @@ export default function GoldCalculator() {
 
             {/* Fiyat Güncelleme Bilgisi */}
             <div style={{
-                padding: 'var(--space-2) var(--space-3)',
-                background: 'var(--surface)',
+                padding: 'var(--space-3)',
+                background: 'rgba(16, 185, 129, 0.05)',
+                border: '1px solid #10b981',
                 borderRadius: 'var(--radius-md)',
-                fontSize: '0.75rem',
-                color: 'var(--text-muted)',
+                fontSize: '0.875rem',
+                color: '#10b981',
                 marginBottom: 'var(--space-4)',
                 display: 'flex',
-                justifyContent: 'space-between',
-                alignItems: 'center'
+                alignItems: 'center',
+                gap: 'var(--space-3)'
             }}>
-                <span>📅 Fiyatlar: {prices.lastUpdated}</span>
-                <span style={{ color: 'var(--warning)' }}>• Güncel</span>
+                <span style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    width: '24px',
+                    height: '24px',
+                    background: '#3b82f6',
+                    borderRadius: '4px',
+                    color: 'white'
+                }}>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" style={{ width: '14px', height: '14px' }}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99" />
+                    </svg>
+                </span>
+                <span style={{ fontWeight: 500 }}>Son güncelleme: {prices.lastUpdated}</span>
             </div>
 
             {/* Alış / Satış Mode */}
