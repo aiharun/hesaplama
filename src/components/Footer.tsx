@@ -78,10 +78,10 @@ export default function Footer() {
                     <div className="footer-section">
                         <h4>Bilgi</h4>
                         <div className="footer-links">
-                            <Link href="/#">Hakkımızda</Link>
-                            <Link href="/#">Gizlilik Politikası</Link>
-                            <Link href="/#">Kullanım Koşulları</Link>
-                            <Link href="/#">İletişim</Link>
+                            <Link href="/hakkimizda">Hakkımızda</Link>
+                            <Link href="/gizlilik">Gizlilik Politikası</Link>
+                            <Link href="/kullanim-kosullari">Kullanım Koşulları</Link>
+                            <Link href="/iletisim">İletişim</Link>
                         </div>
                         <div style={{
                             marginTop: 'var(--space-4)',
