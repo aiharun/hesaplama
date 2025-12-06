@@ -1,36 +1,100 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🧮 Hesap Merkezi
 
-## Getting Started
+Günlük hayatınızda ihtiyaç duyabileceğiniz **23+ ücretsiz hesaplama aracı** tek bir çatı altında.
 
-First, run the development server:
+![Next.js](https://img.shields.io/badge/Next.js-16-black?logo=next.js)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?logo=typescript)
+![License](https://img.shields.io/badge/License-MIT-green)
+
+## ✨ Özellikler
+
+- 🚀 **Next.js 16** ile hızlı ve modern altyapı
+- 💱 **Canlı Döviz Kurları** - 1 saatlik cache ile güncel veriler
+- 📊 **2025 Vergi Dilimleri** - Güncel gelir vergisi hesaplama
+- 📱 **Responsive Tasarım** - Mobil uyumlu arayüz
+- 🔍 **SEO Optimize** - Her sayfa için meta etiketler ve sitemap
+- 📧 **İletişim Formu** - SendGrid entegrasyonu
+- 🌙 **Modern Dark Theme** - Göz yormayan tasarım
+
+## 📂 Hesaplama Araçları
+
+### 💰 Finansal
+- Döviz Dönüştürücü
+- Basit Faiz Hesaplama
+- Bileşik Faiz Hesaplama
+- Kredi Hesaplama
+- KDV Hesaplama
+- Gelir Vergisi Hesaplama
+
+### 🏥 Sağlık
+- Kalori İhtiyacı Hesaplama
+- İdeal Kilo Hesaplama
+- Vücut Kitle İndeksi (BMI)
+- Su İhtiyacı Hesaplama
+- Yürüyüş Kalori Yakımı
+
+### 📏 Birim Dönüştürücüler
+- Kilometre - Mil
+- Kilogram - Pound
+- Celsius - Fahrenheit
+- Santimetre - İnç
+- Litre - Galon
+- Metrekare - Feet Kare
+
+### 📅 Zaman & Tarih
+- Yaş Hesaplama
+- Gün Sayısı Hesaplama
+- Emeklilik Hesaplama
+- Zaman Farkı Hesaplama
+
+### 🔢 Matematik
+- Yüzde Hesaplama
+- Alan Hesaplama
+
+## 🛠️ Kurulum
 
 ```bash
+# Klonla
+git clone https://github.com/aiharun/hesaplama.git
+cd hesaplama
+
+# Bağımlılıkları yükle
+npm install
+
+# Geliştirme sunucusunu başlat
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Tarayıcınızda **http://localhost:3000** adresini açın.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ⚙️ Environment Variables
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+`.env.local` dosyası oluşturun:
 
-## Learn More
+```env
+SENDGRID_API_KEY=your_sendgrid_api_key
+CONTACT_EMAIL=your_email@example.com
+```
 
-To learn more about Next.js, take a look at the following resources:
+## 🚀 Deploy
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Vercel (Önerilen)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/aiharun/hesaplama)
 
-## Deploy on Vercel
+1. Vercel'e bağlanın
+2. Repository'yi seçin
+3. Environment Variables ekleyin
+4. Deploy!
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📄 Lisans
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT License - Özgürce kullanabilirsiniz.
+
+## 🤝 Katkıda Bulunma
+
+Pull request'ler memnuniyetle karşılanır!
+
+---
+
+⭐ Projeyi beğendiyseniz yıldız vermeyi unutmayın!
