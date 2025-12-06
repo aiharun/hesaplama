@@ -31,6 +31,8 @@ import {
     TimeCalculator,
     PercentageCalculator,
     AreaCalculator,
+    FuelCostCalculator,
+    EVChargingCalculator,
 } from '@/components/calculators';
 
 // Map slugs to components
@@ -58,6 +60,8 @@ const calculatorComponents: Record<string, React.ComponentType> = {
     'zaman-farki-hesaplama': TimeCalculator,
     'yuzde-hesaplama': PercentageCalculator,
     'alan-hesaplama': AreaCalculator,
+    'yakit-maliyeti-hesaplama': FuelCostCalculator,
+    'elektrikli-arac-sarj-maliyeti': EVChargingCalculator,
 };
 
 // Generate static params for all calculators

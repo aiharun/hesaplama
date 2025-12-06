@@ -30,3 +30,7 @@ export { default as TimeCalculator } from './TimeCalculator';
 // Matematik
 export { default as PercentageCalculator } from './PercentageCalculator';
 export { default as AreaCalculator } from './AreaCalculator';
+
+// Araç ve Yakıt
+export { default as FuelCostCalculator } from './FuelCostCalculator';
+export { default as EVChargingCalculator } from './EVChargingCalculator';

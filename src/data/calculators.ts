@@ -5,7 +5,7 @@ export interface Calculator {
     description: string;
     metaDescription: string;
     keywords: string[];
-    category: 'finansal' | 'saglik' | 'birim' | 'zaman' | 'matematik';
+    category: 'finansal' | 'saglik' | 'birim' | 'zaman' | 'matematik' | 'arac';
     icon: string;
 }
 
@@ -15,6 +15,7 @@ export const categories = {
     birim: { name: 'Birim Dönüştürücüler', icon: '📏', color: '#3b82f6' },
     zaman: { name: 'Zaman ve Tarih', icon: '📅', color: '#8b5cf6' },
     matematik: { name: 'Matematik', icon: '🔢', color: '#f59e0b' },
+    arac: { name: 'Araç ve Yakıt', icon: '🚗', color: '#06b6d4' },
 };
 
 export const calculators: Calculator[] = [
@@ -256,6 +257,28 @@ export const calculators: Calculator[] = [
         keywords: ['alan hesaplama', 'kare alan', 'daire alan', 'geometrik hesaplama'],
         category: 'matematik',
         icon: '⬜',
+    },
+
+    // Araç ve Yakıt
+    {
+        slug: 'yakit-maliyeti-hesaplama',
+        title: 'Yakıt Maliyeti Hesaplama - Benzin Dizel LPG',
+        shortTitle: 'Yakıt Maliyeti',
+        description: 'Yolculuğunuzun yakıt masrafını hesaplayın. Benzin, dizel ve LPG fiyatlarıyla maliyet hesaplama.',
+        metaDescription: 'Ücretsiz yakıt maliyeti hesaplama aracı. Mesafe, tüketim ve yakıt tipine göre yolculuk masrafınızı hesaplayın.',
+        keywords: ['yakıt hesaplama', 'benzin maliyeti', 'dizel hesaplama', 'lpg maliyeti', 'yol masrafı'],
+        category: 'arac',
+        icon: '⛽',
+    },
+    {
+        slug: 'elektrikli-arac-sarj-maliyeti',
+        title: 'Elektrikli Araç Şarj Maliyeti - EV Hesaplama',
+        shortTitle: 'EV Şarj Maliyeti',
+        description: 'Elektrikli aracınızın şarj maliyetini hesaplayın. Benzinli araçla karşılaştırma ve CO₂ tasarrufu.',
+        metaDescription: 'Elektrikli araç şarj maliyeti hesaplama. Ev şarjı, halka açık istasyon ve hızlı şarj fiyatlarıyla maliyet hesaplayın.',
+        keywords: ['elektrikli araç', 'EV şarj', 'şarj maliyeti', 'Tesla', 'Togg', 'elektrikli araba'],
+        category: 'arac',
+        icon: '🔋',
     },
 ];
 

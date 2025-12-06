@@ -725,6 +725,74 @@ export const seoContents: Record<string, SEOContent> = {
             }
         ],
         relatedTerms: ['geometri', 'kare alan', 'daire alan', 'üçgen alan', 'metrekare']
+    },
+
+    'yakit-maliyeti-hesaplama': {
+        slug: 'yakit-maliyeti-hesaplama',
+        title: 'Yakıt Maliyeti Hesaplama: Benzin, Dizel, LPG',
+        intro: 'Yakıt maliyeti hesaplama aracı, yolculuğunuzun benzin, dizel veya LPG masrafını hesaplamanızı sağlar. Mesafe, ortalama tüketim ve güncel yakıt fiyatlarına göre toplam maliyetinizi öğrenin.',
+        howItWorks: 'Yakıt maliyeti = (Mesafe × Tüketim / 100) × Yakıt Fiyatı. Örneğin 500 km yolculuk, 7 lt/100km tüketim ve 44.50 TL/lt benzin fiyatıyla: (500 × 7 / 100) × 44.50 = 1557.50 TL.',
+        benefits: [
+            'Benzin, dizel ve LPG desteği',
+            'Km başına maliyet hesaplama',
+            'Güncel yakıt fiyatları',
+            'Özel fiyat girişi seçeneği'
+        ],
+        tips: [
+            'Şehir içi sürüşte tüketim %20-30 daha yüksek olabilir',
+            'Klima kullanımı yakıt tüketimini %10-15 artırır',
+            'Lastik basıncını kontrol edin - düşük basınç tüketimi artırır',
+            'Sabit hızda seyretmek yakıt tasarrufu sağlar'
+        ],
+        faq: [
+            {
+                question: 'LPG mi benzin mi daha ekonomik?',
+                answer: 'LPG genellikle benzinden %40-50 daha ucuzdur, ancak tüketim %10-15 daha yüksektir. Yine de LPG toplam maliyette avantajlıdır.'
+            },
+            {
+                question: 'Dizel mi benzin mi tercih etmeliyim?',
+                answer: 'Yıllık 20.000 km üzeri kullanım için dizel avantajlıdır. Daha düşük kullanımda benzin/LPG tercih edilebilir.'
+            },
+            {
+                question: 'Ortalama tüketimi nasıl öğrenirim?',
+                answer: 'Aracınızın kullanım kılavuzuna bakın veya birkaç depo dolumu arasındaki km\'yi takip ederek hesaplayın.'
+            }
+        ],
+        relatedTerms: ['benzin hesaplama', 'yakıt tüketimi', 'dizel maliyet', 'LPG hesaplama', 'yol masrafı']
+    },
+
+    'elektrikli-arac-sarj-maliyeti': {
+        slug: 'elektrikli-arac-sarj-maliyeti',
+        title: 'Elektrikli Araç Şarj Maliyeti Hesaplama',
+        intro: 'Elektrikli araç (EV) şarj maliyeti hesaplama aracı, Tesla, Togg ve diğer elektrikli araçların şarj masrafını hesaplamanızı sağlar. Benzinli araçlarla karşılaştırma ve CO₂ tasarrufu bilgisi de sunar.',
+        howItWorks: 'Şarj maliyeti = (Mesafe × Tüketim / 100) × Elektrik Fiyatı. Örneğin 300 km, 18 kWh/100km tüketim ve 4.25 TL/kWh ev şarjı fiyatıyla: (300 × 18 / 100) × 4.25 = 229.50 TL.',
+        benefits: [
+            'Ev, halka açık ve hızlı şarj seçenekleri',
+            'Benzinli araçla maliyet karşılaştırması',
+            'CO₂ tasarrufu hesaplama',
+            'Popüler EV tüketim değerleri'
+        ],
+        tips: [
+            'Gece tarifesinde ev şarjı en ekonomik seçenektir',
+            'Bataryayı %20-80 arasında tutmak ömrünü uzatır',
+            'Hızlı şarj (DC) acil durumlar için tercih edilmeli',
+            'Kış aylarında elektrik tüketimi %20-30 artabilir'
+        ],
+        faq: [
+            {
+                question: 'Elektrikli araç benzinliden ne kadar tasarruflu?',
+                answer: 'Ev şarjıyla elektrikli araç, benzinli araca göre ortalama %60-70 daha ucuzdur. Halka açık şarjda bu oran %30-40\'a düşer.'
+            },
+            {
+                question: 'Bir şarjda kaç km gidilir?',
+                answer: 'Batarya kapasitesine göre değişir. 60 kWh batarya ve 18 kWh/100km tüketimle yaklaşık 330 km menzil elde edilir.'
+            },
+            {
+                question: 'Ev şarjı için ne gerekli?',
+                answer: 'Standart prize bağlanabilir (yavaş) veya 7-22 kW wallbox kurulabilir. Wallbox için elektrik tesisat uygunluğu kontrol edilmelidir.'
+            }
+        ],
+        relatedTerms: ['elektrikli araç', 'EV şarj', 'Tesla maliyet', 'Togg şarj', 'elektrik arabası', 'şarj istasyonu']
     }
 };
 
