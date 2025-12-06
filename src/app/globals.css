@@ -274,10 +274,45 @@ p {
   }
 }
 
+/* Mobile logo - hide text on very small screens */
+@media (max-width: 420px) {
+  .logo span:not(.logo-icon) {
+    display: none;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+}
+
 .search-box {
   position: relative;
   flex: 1;
   max-width: 400px;
+  min-width: 120px;
+}
+
+/* Mobile search adjustment */
+@media (max-width: 640px) {
+  .search-box {
+    max-width: none;
+  }
+
+  .search-input {
+    padding: var(--space-2) var(--space-3);
+    padding-left: var(--space-8);
+    font-size: 0.8125rem;
+  }
+
+  .search-input::placeholder {
+    font-size: 0.75rem;
+  }
+
+  .search-icon {
+    left: var(--space-3);
+    width: 16px;
+    height: 16px;
+  }
 }
 
 .search-input {

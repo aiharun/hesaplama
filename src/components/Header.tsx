@@ -95,7 +95,7 @@ export default function Header() {
                                 ref={inputRef}
                                 type="text"
                                 className="search-input"
-                                placeholder="Hesap aracı ara... (Ctrl+K)"
+                                placeholder="Ara..."
                                 value={query}
                                 onChange={(e) => handleSearch(e.target.value)}
                                 onFocus={() => query.length >= 2 && setIsOpen(true)}
