@@ -60,7 +60,7 @@ export default function AdBanner({
 export function TopBanner() {
     return (
         <AdBanner
-            slot="1234567890"
+            slot="7370230261"
             format="horizontal"
             className="ad-banner"
         />
@@ -70,7 +70,7 @@ export function TopBanner() {
 export function MiddleBanner() {
     return (
         <AdBanner
-            slot="2345678901"
+            slot="7370230261"
             format="auto"
             className="ad-banner ad-banner-large"
         />
@@ -80,7 +80,7 @@ export function MiddleBanner() {
 export function SidebarAd() {
     return (
         <AdBanner
-            slot="3456789012"
+            slot="7370230261"
             format="rectangle"
             className="ad-banner ad-banner-side"
         />
@@ -90,7 +90,7 @@ export function SidebarAd() {
 export function BottomBanner() {
     return (
         <AdBanner
-            slot="4567890123"
+            slot="7370230261"
             format="horizontal"
             className="ad-banner"
         />
