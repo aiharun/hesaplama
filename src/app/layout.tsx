@@ -61,10 +61,10 @@ export default function RootLayout({
   return (
     <html lang="tr">
       <head>
-        {/* Google Ads Script - Gerçek AdSense ID'si ile değiştirin */}
+        {/* Google Ads Script */}
         <script
           async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3627905544274845"
           crossOrigin="anonymous"
         />
         {/* Google Analytics (optional) */}
