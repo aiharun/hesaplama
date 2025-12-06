@@ -229,30 +229,26 @@ export default function Header() {
                         {/* Contact Button */}
                         <button
                             onClick={() => setIsContactOpen(true)}
-                            className="btn"
+                            className="contact-btn"
+                            aria-label="İletişim"
                             style={{
-                                background: 'var(--surface)',
-                                border: '1px solid var(--glass-border)',
-                                color: 'var(--text-secondary)',
+                                background: 'linear-gradient(135deg, var(--primary-600), var(--primary-500))',
+                                border: 'none',
+                                color: 'white',
                                 padding: 'var(--space-2) var(--space-4)',
                                 display: 'flex',
                                 alignItems: 'center',
                                 gap: 'var(--space-2)',
                                 whiteSpace: 'nowrap',
-                                transition: 'all var(--transition-fast)'
-                            }}
-                            onMouseEnter={(e) => {
-                                e.currentTarget.style.borderColor = 'var(--primary-500)';
-                                e.currentTarget.style.color = 'var(--primary-400)';
-                                e.currentTarget.style.background = 'var(--surface-hover)';
-                            }}
-                            onMouseLeave={(e) => {
-                                e.currentTarget.style.borderColor = 'var(--glass-border)';
-                                e.currentTarget.style.color = 'var(--text-secondary)';
-                                e.currentTarget.style.background = 'var(--surface)';
+                                transition: 'all var(--transition-fast)',
+                                borderRadius: 'var(--radius-lg)',
+                                fontWeight: 600,
+                                fontSize: '0.875rem',
+                                boxShadow: '0 2px 8px rgba(139, 92, 246, 0.3)',
+                                cursor: 'pointer'
                             }}
                         >
-                            <span>📬</span>
+                            <span style={{ fontSize: '1.125rem' }}>📬</span>
                             <span className="contact-text">İletişim</span>
                         </button>
                     </div>
@@ -269,6 +265,12 @@ export default function Header() {
         @media (max-width: 640px) {
           .contact-text {
             display: none;
+          }
+          .contact-btn {
+            padding: var(--space-2) !important;
+            min-width: 40px;
+            min-height: 40px;
+            justify-content: center;
           }
         }
       `}</style>
