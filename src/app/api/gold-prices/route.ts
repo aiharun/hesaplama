@@ -69,7 +69,7 @@ export async function GET() {
 
     return NextResponse.json({
         ...prices,
-        lastUpdated: new Date().toLocaleString('tr-TR'),
+        lastUpdated: new Date().toLocaleString('tr-TR', { timeZone: 'Europe/Istanbul' }),
         source
     });
 }
