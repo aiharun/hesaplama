@@ -73,6 +73,40 @@ export const seoContents: Record<string, SEOContent> = {
         ],
         relatedTerms: ['faiz hesaplama', 'mevduat faizi', 'yatırım getirisi', 'anapara']
     },
+    'altin-hesaplama': {
+        slug: 'altin-hesaplama',
+        title: 'Altın Hesaplaması Nasıl Yapılır?',
+        intro: 'Altın hesaplama aracı, gram, çeyrek, yarım, tam ve cumhuriyet altını gibi farklı altın türlerinin güncel TL karşılığını hesaplamanıza yardımcı olur. İster yatırım amaçlı olsun ister düğün takısı, altın değerini anında öğrenin.',
+        howItWorks: 'Yatırım yapmak istediğiniz altın türünü seçin ve adet/gram miktarını girin. Hesaplayıcı, en güncel altın fiyatlarını kullanarak toplam tutarı otomatik olarak hesaplar. Alış ve satış modları sayesinde spread dahil gerçekçi rakamları görebilirsiniz.',
+        benefits: [
+            'Canlı altın fiyatları ile anlık hesaplama',
+            'Gram, çeyrek, yarım, tam ve cumhuriyet altını desteği',
+            'Alış ve satış fiyatı simülasyonu',
+            'Toplam gram ve TL tutarı gösterimi',
+            'Kolay ve hızlı arayüz'
+        ],
+        tips: [
+            'Altın yatırımı uzun vadeli bir tasarruf aracıdır',
+            'Kuyumcudan kuyumcuya fiyatlar ufak farklılıklar gösterebilir',
+            'İşçiliksiz ürünler (gram altın, cumhuriyet altını) yatırım için daha avantajlıdır',
+            'Fiziki altın alırken güvenilir yerleri tercih edin'
+        ],
+        faq: [
+            {
+                question: 'Çeyrek altın kaç gram?',
+                answer: 'Çeyrek altın, 22 ayar olup 1.75 gram ağırlığındadır. İçerisinde 1.6065 gram has altın bulunur.'
+            },
+            {
+                question: 'Cumhuriyet altını ile Ata altın aynı mı?',
+                answer: 'Cumhuriyet altını ve Ata altın benzer özelliklere sahip olsa da basım yılları ve ufak boyut farkları olabilir. İkisi de 7.20 gram ağırlığındadır ve yatırım için tercih edilir.'
+            },
+            {
+                question: 'Altın fiyatları neye göre değişir?',
+                answer: 'Altın fiyatları, küresel piyasalardaki ons altın fiyatı ve Dolar/TL kurundaki değişimlere göre belirlenir.'
+            }
+        ],
+        relatedTerms: ['gram altın fiyatı', 'çeyrek altın', 'altın borsası', 'altın yatırım', 'cumhuriyet altını']
+    },
 
     'bilesik-faiz-hesaplama': {
         slug: 'bilesik-faiz-hesaplama',
