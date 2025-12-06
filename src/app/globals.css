@@ -357,6 +357,27 @@ p {
   color: var(--primary-400);
 }
 
+/* Contact Button Mobile */
+.contact-btn {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+@media (max-width: 768px) {
+  .contact-text {
+    display: none !important;
+  }
+
+  .contact-btn {
+    padding: var(--space-2) !important;
+    min-width: 44px;
+    min-height: 44px;
+    justify-content: center;
+    border-radius: var(--radius-full) !important;
+  }
+}
+
 /* ===== HERO ===== */
 .hero {
   text-align: center;
