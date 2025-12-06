@@ -262,15 +262,16 @@ export default function Header() {
             />
 
             <style jsx>{`
-        @media (max-width: 640px) {
+        @media (max-width: 768px) {
           .contact-text {
-            display: none;
+            display: none !important;
           }
           .contact-btn {
             padding: var(--space-2) !important;
-            min-width: 40px;
-            min-height: 40px;
+            min-width: 44px;
+            min-height: 44px;
             justify-content: center;
+            border-radius: var(--radius-full) !important;
           }
         }
       `}</style>
