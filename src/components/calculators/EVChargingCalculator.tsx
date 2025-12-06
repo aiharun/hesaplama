@@ -10,39 +10,53 @@ interface EVResult {
     fuelEquivalent: number;
 }
 
+// Aralık 2025 güncel şarj fiyatları
+const CHARGING_PRICES = {
+    home: {
+        price: 4.50,
+        label: '🏠 Ev Şarjı',
+        desc: 'AC 7-22 kW',
+        time: '6-8 saat'
+    },
+    zes: {
+        price: 10.99,
+        label: '⚡ ZES',
+        desc: 'DC 180 kW altı',
+        time: '30-45 dk'
+    },
+    trugo: {
+        price: 10.60,
+        label: '🟢 Trugo (Togg)',
+        desc: 'DC 150 kW altı',
+        time: '30-45 dk'
+    },
+    esarj: {
+        price: 12.90,
+        label: '🔵 Eşarj',
+        desc: 'DC 90 kW altı',
+        time: '45-60 dk'
+    }
+};
+
 export default function EVChargingCalculator() {
     const [distance, setDistance] = useState<string>('100');
     const [consumption, setConsumption] = useState<string>('18');
-    const [chargeType, setChargeType] = useState<'home' | 'public' | 'fast'>('home');
+    const [chargeType, setChargeType] = useState<'home' | 'zes' | 'trugo' | 'esarj'>('home');
     const [customPrice, setCustomPrice] = useState<string>('');
     const [result, setResult] = useState<EVResult | null>(null);
-
-    // Güncel elektrik fiyatları (TL/kWh)
-    const electricityPrices = {
-        home: 4.25,      // Ev şarjı (gece tarife)
-        public: 8.50,    // Halka açık şarj istasyonu
-        fast: 12.00      // Hızlı şarj (DC)
-    };
-
-    const chargeTypeInfo = {
-        home: { label: '🏠 Ev Şarjı', desc: 'AC 7-22 kW', time: '6-8 saat' },
-        public: { label: '🔌 Şarj İstasyonu', desc: 'AC 22 kW', time: '2-4 saat' },
-        fast: { label: '⚡ Hızlı Şarj', desc: 'DC 50-150 kW', time: '20-40 dk' }
-    };
 
     const calculate = () => {
         const dist = parseFloat(distance);
         const cons = parseFloat(consumption);
-        const price = customPrice ? parseFloat(customPrice) : electricityPrices[chargeType];
+        const price = customPrice ? parseFloat(customPrice) : CHARGING_PRICES[chargeType].price;
 
         if (dist && cons && price) {
-            // kWh ihtiyacı = mesafe * tüketim (kWh/100km) / 100
             const energyNeeded = (dist * cons) / 100;
             const chargingCost = energyNeeded * price;
             const costPerKm = chargingCost / dist;
 
-            // Benzinli araçla karşılaştırma (7 lt/100km, 44.50 TL/lt)
-            const fuelEquivalent = (dist * 7 / 100) * 44.50;
+            // Benzinli araçla karşılaştırma (7 lt/100km, 48.29 TL/lt)
+            const fuelEquivalent = (dist * 7 / 100) * 48.29;
 
             // CO2 tasarrufu (benzinli araç ~2.3 kg CO2/lt)
             const co2Saved = (dist * 7 / 100) * 2.3;
@@ -51,7 +65,7 @@ export default function EVChargingCalculator() {
         }
     };
 
-    const currentPrice = customPrice ? parseFloat(customPrice) : electricityPrices[chargeType];
+    const currentPrice = customPrice ? parseFloat(customPrice) : CHARGING_PRICES[chargeType].price;
     const savings = result ? result.fuelEquivalent - result.chargingCost : 0;
 
     return (
@@ -62,6 +76,22 @@ export default function EVChargingCalculator() {
                     <h1 className="calc-widget-title">Elektrikli Araç Şarj Maliyeti</h1>
                     <p className="calc-widget-subtitle">EV şarj masrafınızı ve tasarrufunuzu hesaplayın</p>
                 </div>
+            </div>
+
+            {/* Güncelleme Bilgisi */}
+            <div style={{
+                padding: 'var(--space-2) var(--space-3)',
+                background: 'var(--surface)',
+                borderRadius: 'var(--radius-md)',
+                fontSize: '0.75rem',
+                color: 'var(--text-muted)',
+                marginBottom: 'var(--space-4)',
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'center'
+            }}>
+                <span>📅 Fiyatlar: Aralık 2025</span>
+                <span style={{ color: 'var(--success)' }}>• Güncel</span>
             </div>
 
             <div className="form-row">
@@ -95,13 +125,13 @@ export default function EVChargingCalculator() {
             </div>
 
             <div className="form-group">
-                <label className="form-label">Şarj Tipi</label>
+                <label className="form-label">Şarj Sağlayıcısı</label>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-2)' }}>
-                    {Object.entries(chargeTypeInfo).map(([key, info]) => (
+                    {Object.entries(CHARGING_PRICES).map(([key, info]) => (
                         <button
                             key={key}
                             onClick={() => {
-                                setChargeType(key as 'home' | 'public' | 'fast');
+                                setChargeType(key as 'home' | 'zes' | 'trugo' | 'esarj');
                                 setCustomPrice('');
                             }}
                             className="btn"
@@ -120,7 +150,7 @@ export default function EVChargingCalculator() {
                                 <div style={{ fontSize: '0.75rem', opacity: 0.8 }}>{info.desc} • {info.time}</div>
                             </div>
                             <div style={{ textAlign: 'right' }}>
-                                <div style={{ fontWeight: 600 }}>₺{electricityPrices[key as keyof typeof electricityPrices]}</div>
+                                <div style={{ fontWeight: 600 }}>₺{info.price.toFixed(2)}</div>
                                 <div style={{ fontSize: '0.75rem', opacity: 0.8 }}>/kWh</div>
                             </div>
                         </button>
@@ -135,7 +165,7 @@ export default function EVChargingCalculator() {
                     className="form-input"
                     value={customPrice}
                     onChange={(e) => setCustomPrice(e.target.value)}
-                    placeholder={`Varsayılan: ₺${electricityPrices[chargeType]}/kWh`}
+                    placeholder={`Varsayılan: ₺${CHARGING_PRICES[chargeType].price}/kWh`}
                     min="0"
                     step="0.01"
                 />
@@ -161,7 +191,7 @@ export default function EVChargingCalculator() {
                             <span className="result-row-value">₺{result.costPerKm.toFixed(2)}/km</span>
                         </div>
                         <div className="result-row">
-                            <span className="result-row-label">Elektrik Fiyatı</span>
+                            <span className="result-row-label">Şarj Fiyatı</span>
                             <span className="result-row-value">₺{currentPrice}/kWh</span>
                         </div>
                     </div>
