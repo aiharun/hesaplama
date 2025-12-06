@@ -1,0 +1,12 @@
+# Hesap Merkezi - Robots.txt
+
+User-agent: *
+Allow: /
+Allow: /admin/
+
+# Sitemap
+Sitemap: https://hesapmerkezi.com/sitemap.xml
+
+# Disallow admin/private areas (if any)
+Disallow: /api/
+Disallow: /_next/
