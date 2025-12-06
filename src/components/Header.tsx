@@ -141,14 +141,11 @@ export default function Header() {
                                 >
                                     <div style={{
                                         padding: 'var(--space-2) var(--space-3)',
-                                        fontSize: '0.75rem',
+                                        fontSize: '0.6875rem',
                                         color: 'var(--text-muted)',
                                         borderBottom: '1px solid var(--glass-border)',
-                                        display: 'flex',
-                                        justifyContent: 'space-between'
                                     }}>
                                         <span>{results.length} sonuç bulundu</span>
-                                        <span style={{ opacity: 0.7 }}>↑↓ ile gezin, Enter ile seçin</span>
                                     </div>
                                     {results.map((calc, index) => (
                                         <Link
@@ -163,8 +160,8 @@ export default function Header() {
                                             style={{
                                                 display: 'flex',
                                                 alignItems: 'center',
-                                                gap: 'var(--space-3)',
-                                                padding: 'var(--space-3) var(--space-4)',
+                                                gap: 'var(--space-2)',
+                                                padding: 'var(--space-2) var(--space-3)',
                                                 transition: 'all var(--transition-fast)',
                                                 background: index === selectedIndex ? 'var(--surface-hover)' : 'transparent',
                                                 borderLeft: index === selectedIndex ? '3px solid var(--primary-500)' : '3px solid transparent'
@@ -172,10 +169,10 @@ export default function Header() {
                                             onMouseEnter={() => setSelectedIndex(index)}
                                         >
                                             <span style={{
-                                                fontSize: '1.25rem',
+                                                fontSize: '1rem',
                                                 flexShrink: 0,
-                                                width: '32px',
-                                                height: '32px',
+                                                width: '28px',
+                                                height: '28px',
                                                 display: 'flex',
                                                 alignItems: 'center',
                                                 justifyContent: 'center',
@@ -184,37 +181,18 @@ export default function Header() {
                                             }}>
                                                 {calc.icon}
                                             </span>
-                                            <div style={{ flex: 1, minWidth: 0 }}>
+                                            <div style={{ flex: 1, minWidth: 0, overflow: 'hidden' }}>
                                                 <div style={{
                                                     fontWeight: 500,
                                                     color: 'var(--text-primary)',
-                                                    fontSize: '0.9375rem'
-                                                }}>
-                                                    {calc.shortTitle}
-                                                </div>
-                                                <div style={{
-                                                    fontSize: '0.75rem',
-                                                    color: 'var(--text-muted)',
+                                                    fontSize: '0.8125rem',
                                                     whiteSpace: 'nowrap',
                                                     overflow: 'hidden',
                                                     textOverflow: 'ellipsis'
                                                 }}>
-                                                    {calc.description}
+                                                    {calc.shortTitle}
                                                 </div>
                                             </div>
-                                            <span style={{
-                                                fontSize: '0.6875rem',
-                                                color: 'var(--text-muted)',
-                                                background: 'var(--surface)',
-                                                padding: '2px 6px',
-                                                borderRadius: 'var(--radius-sm)',
-                                                flexShrink: 0
-                                            }}>
-                                                {calc.category === 'finansal' ? '💰' :
-                                                    calc.category === 'saglik' ? '🏥' :
-                                                        calc.category === 'birim' ? '📏' :
-                                                            calc.category === 'zaman' ? '📅' : '🔢'}
-                                            </span>
                                         </Link>
                                     ))}
                                 </div>
