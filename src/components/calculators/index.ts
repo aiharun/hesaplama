@@ -5,6 +5,7 @@ export { default as CompoundInterest } from './CompoundInterest';
 export { default as LoanCalculator } from './LoanCalculator';
 export { default as VATCalculator } from './VATCalculator';
 export { default as IncomeTaxCalculator } from './IncomeTaxCalculator';
+export { default as GoldCalculator } from './GoldCalculator';
 
 // Sağlık Hesaplayıcıları
 export { default as CalorieCalculator } from './CalorieCalculator';

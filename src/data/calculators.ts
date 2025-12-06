@@ -80,6 +80,16 @@ export const calculators: Calculator[] = [
         category: 'finansal',
         icon: '📋',
     },
+    {
+        slug: 'altin-hesaplama',
+        title: 'Altın Hesaplama - Gram, Çeyrek, Yarım Altın Fiyatları',
+        shortTitle: 'Altın Hesaplama',
+        description: 'Güncel altın fiyatlarıyla gram, çeyrek, yarım, tam altın değerlerini hesaplayın.',
+        metaDescription: 'Güncel altın fiyatları ile altın hesaplama aracı. Gram altın, çeyrek, yarım, tam ve cumhuriyet altını değerlerini anında hesaplayın.',
+        keywords: ['altın hesaplama', 'gram altın fiyatı', 'çeyrek altın', 'altın fiyatları', 'cumhuriyet altını'],
+        category: 'finansal',
+        icon: '🪙',
+    },
 
     // Sağlık Hesaplayıcıları
     {
