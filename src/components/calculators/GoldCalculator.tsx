@@ -39,21 +39,26 @@ export default function GoldCalculator() {
     const [mode, setMode] = useState<'buy' | 'sell'>('buy');
     const [customPrice, setCustomPrice] = useState<string>('');
 
-    // Altın fiyatlarını API'den çek (opsiyonel)
+    // Altın fiyatlarını API'den çek (10 saniyede bir)
     useEffect(() => {
         const fetchPrices = async () => {
             try {
-                const response = await fetch('/api/gold-prices');
+                // Cache busting için timestamp ekle
+                const response = await fetch(`/api/gold-prices?t=${Date.now()}`);
                 if (response.ok) {
                     const data = await response.json();
                     setPrices(data);
                 }
-            } catch {
-                // Fallback to default prices
+            } catch (error) {
+                console.error('Altın fiyatları güncellenemedi:', error);
             }
         };
 
-        fetchPrices();
+        fetchPrices(); // İlk yükleme
+
+        const interval = setInterval(fetchPrices, 10000); // 10 saniye
+
+        return () => clearInterval(interval);
     }, []);
 
     const currentPrice = customPrice
