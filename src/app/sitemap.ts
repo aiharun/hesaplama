@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 import { calculators } from '@/data/calculators';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = 'https://hesapmerkezi.com'; // Gerçek domain ile değiştirin
+    const baseUrl = 'https://hesaplas.vercel.app/'; // Gerçek domain ile değiştirin
 
     // Ana sayfa
     const routes: MetadataRoute.Sitemap = [
